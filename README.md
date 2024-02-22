@@ -22,6 +22,7 @@ The API for ClansLite.
 	    <groupId>com.github.CraptiCraft-Development</groupId>
 	    <artifactId>ClansLite-API</artifactId>
 	    <version>[CURRENT-VERSION]</version>
+            <scope>provided</scope>
 	</dependency>
 ```
 
