@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/CraptiCraft-Development/ClansLite-API.svg)](https://jitpack.io/#CraptiCraft-Development/ClansLite-API)
+
 # ClansLite-API
 The API for ClansLite.
 
