@@ -196,7 +196,7 @@ public interface ClansLiteAPI {
      * This method will fire an AsyncClanCreateEvent upon successful Clan creation.
      *
      * @param player The Bukkit Player object to create a Clan from.
-     * @param clanName The name of the clan to create. (This cannot be changed later & cannot contain color codes)
+     * @param clanName The name of the clan to create. (This cannot be changed later and cannot contain color codes)
      * @return Returns a Clan object.
      */
     Clan createClan(Player player, String clanName);
