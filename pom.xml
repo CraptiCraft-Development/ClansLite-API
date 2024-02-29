@@ -48,6 +48,15 @@
                     <nohelp>true</nohelp>
                     <excludes>ClansLite-Core.src.main.java.me.loving11ish.clans.*</excludes>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <id>execution1</id>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
             </plugin>
 
         </plugins>
