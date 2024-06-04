@@ -15,8 +15,8 @@ import java.util.UUID;
 /**
  * This is the main API class for ClansLite.
  * This class contains all the methods that can be used to interact with the plugin.
- * This class must be initialized in order to use any of the methods.
  */
+@SuppressWarnings("unused")
 public interface ClansLiteAPI {
 
     /**
