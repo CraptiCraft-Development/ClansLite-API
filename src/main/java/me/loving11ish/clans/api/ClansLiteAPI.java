@@ -32,6 +32,14 @@ public interface ClansLiteAPI {
     }
 
     /**
+     * Refreshes the clan names and prefixes lists.
+     * <p>
+     * This method should be called after any changes to the Clans or UserMap HashMaps.
+     * This method should be called after any changes to ANY YML file changes.
+     */
+    void refreshData();
+
+    /**
      *
      * @return Returns true if the plugin was enabled successfully, otherwise returns false.
      */
