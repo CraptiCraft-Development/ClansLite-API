@@ -40,6 +40,14 @@ public class AsyncChestBuyEvent extends Event {
         return HANDLERS;
     }
 
+    /**
+     * Get the handlers for the event
+     * @return the handlers
+     */
+    public static HandlerList getHandlerList() {
+        return HANDLERS;
+    }
+
     public Player getCreatedBy() {
         return createdBy;
     }

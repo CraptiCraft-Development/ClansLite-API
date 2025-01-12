@@ -41,6 +41,14 @@ public class AsyncChestBreakEvent extends Event {
     }
 
     /**
+     * Get the handlers for the event
+     * @return the handlers
+     */
+    public static HandlerList getHandlerList() {
+        return HANDLERS;
+    }
+
+    /**
      * Get the location of the chest
      * @return the chest location
      */

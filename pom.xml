@@ -6,7 +6,7 @@
 
     <groupId>me.loving11ish</groupId>
     <artifactId>ClansLite-API</artifactId>
-    <version>1.6.0</version>
+    <version>1.6.0-ALPHA-01</version>
     <packaging>jar</packaging>
 
     <name>ClansLite-API</name>
@@ -81,13 +81,17 @@
     </repositories>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.spigotmc/spigot-api -->
+        <!-- Spigot-api is provided by main server instance -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
+        <!-- JetBrains-annotations is provided by runtime compiler -->
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>

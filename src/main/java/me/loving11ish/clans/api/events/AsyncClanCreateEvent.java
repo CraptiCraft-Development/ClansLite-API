@@ -35,6 +35,14 @@ public class AsyncClanCreateEvent extends Event {
     }
 
     /**
+     * Get the handlers for the event
+     * @return the handlers
+     */
+    public static HandlerList getHandlerList() {
+        return HANDLERS;
+    }
+
+    /**
      * Get the player who created the event
      * @return the player
      */

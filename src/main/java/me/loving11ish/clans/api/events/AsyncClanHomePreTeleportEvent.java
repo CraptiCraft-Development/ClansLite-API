@@ -15,6 +15,7 @@ public class AsyncClanHomePreTeleportEvent extends Event implements Cancellable 
     private final Player createdBy;
     @Nullable
     private final Clan clan;
+    private boolean isCancelled;
 
     /**
      * Constructor for the AsyncClanHomePreTeleportEvent
@@ -39,6 +40,14 @@ public class AsyncClanHomePreTeleportEvent extends Event implements Cancellable 
     }
 
     /**
+     * Get the handlers for the event
+     * @return the handlers
+     */
+    public static HandlerList getHandlerList() {
+        return HANDLERS;
+    }
+
+    /**
      * Get the player who created the event
      * @return the player
      */
@@ -54,12 +63,21 @@ public class AsyncClanHomePreTeleportEvent extends Event implements Cancellable 
         return clan;
     }
 
+    /**
+     * If the event is cancelled then the player will not be teleported to the clan home
+     * @return the cancellation state
+     */
     @Override
     public boolean isCancelled() {
-        return false;
+        return this.isCancelled;
     }
 
+    /**
+     * Set the event to cancelled to prevent the player from being teleported to the clan home
+     * @param cancel the cancellation state
+     */
     @Override
     public void setCancelled(boolean cancel) {
+        this.isCancelled = cancel;
     }
 }
