@@ -6,7 +6,7 @@
 
     <groupId>me.loving11ish</groupId>
     <artifactId>ClansLite-API</artifactId>
-    <version>1.6.0-ALPHA-01</version>
+    <version>1.6.0-ALPHA-02</version>
     <packaging>jar</packaging>
 
     <name>ClansLite-API</name>
