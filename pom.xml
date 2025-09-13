@@ -6,7 +6,7 @@
 
     <groupId>me.loving11ish</groupId>
     <artifactId>ClansLite-API</artifactId>
-    <version>1.6.1-BETA-01</version>
+    <version>1.6.1</version>
     <packaging>jar</packaging>
 
     <name>ClansLite-API</name>
@@ -95,7 +95,7 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>26.0.2</version>
+            <version>26.0.2-1</version>
             <scope>provided</scope>
         </dependency>
 
