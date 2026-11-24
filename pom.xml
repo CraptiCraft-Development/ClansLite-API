@@ -6,7 +6,7 @@
 
     <groupId>me.loving11ish</groupId>
     <artifactId>ClansLite-API</artifactId>
-    <version>1.6.5-ALPHA-01</version>
+    <version>1.6.5-ALPHA-02</version>
     <packaging>jar</packaging>
 
     <name>ClansLite-API</name>
@@ -15,7 +15,7 @@
     <url>https://www.spigotmc.org/resources/clanslite.97163/</url>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -39,7 +39,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.14.0</version>
+                <version>3.16.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -49,11 +49,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.11.2</version>
+                <version>3.12.0</version>
                 <configuration>
                     <show>private</show>
                     <nohelp>true</nohelp>
-                    <excludes>ClansLite-Core.src.main.java.me.loving11ish.clans.*</excludes>
                 </configuration>
                 <executions>
                     <execution>
@@ -95,7 +94,7 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>26.0.2-1</version>
+            <version>26.1.0</version>
             <scope>provided</scope>
         </dependency>
 
