@@ -53,6 +53,7 @@
                 <configuration>
                     <show>private</show>
                     <nohelp>true</nohelp>
+                    <subpackages>me.loving11ish.clans.api</subpackages>
                 </configuration>
                 <executions>
                     <execution>
