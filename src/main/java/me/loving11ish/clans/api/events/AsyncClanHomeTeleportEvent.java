@@ -7,12 +7,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired after a player teleports to a clan home.
+ */
 public class AsyncClanHomeTeleportEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who teleported. */
     private final Player createdBy;
+    /** Clan that owns the destination home. */
     private final Clan clan;
+    /** Destination clan home location. */
     private final Location homeLocation;
+    /** Location from which the player teleported. */
     private final Location tpFromLocation;
 
     /**

@@ -8,13 +8,20 @@ import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * Fired before a player teleports to a clan home.
+ */
 public class AsyncClanHomePreTeleportEvent extends Event implements Cancellable {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who is about to teleport, or {@code null}. */
     @Nullable
     private final Player createdBy;
+    /** Destination clan, or {@code null}. */
     @Nullable
     private final Clan clan;
+    /** Whether the teleport has been cancelled. */
     private boolean isCancelled;
 
     /**

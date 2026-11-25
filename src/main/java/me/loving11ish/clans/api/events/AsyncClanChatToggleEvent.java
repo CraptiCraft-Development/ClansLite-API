@@ -6,11 +6,18 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when clan chat is enabled or disabled.
+ */
 public class AsyncClanChatToggleEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who toggled clan chat. */
     private final Player createdBy;
+    /** Clan whose chat state changed. */
     private final Clan clan;
+    /** Whether clan chat is enabled. */
     private final boolean toggledState;
 
     /**

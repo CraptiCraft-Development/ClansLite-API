@@ -6,11 +6,18 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when clan PvP is enabled or disabled.
+ */
 public class AsyncClanPvpToggleEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who toggled clan PvP. */
     private final Player createdBy;
+    /** Clan whose PvP state changed. */
     private final Clan clan;
+    /** Whether clan PvP is enabled. */
     private final boolean pvpToggleState;
 
     /**

@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when one clan declares another as an enemy.
+ */
 public class AsyncClanEnemyAddEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who declared the enemy. */
     private final Player createdBy;
+    /** Clan declaring the enemy. */
     private final Clan clan;
+    /** Creator of the enemy clan. */
     private final Player enemyClanCreatedBy;
+    /** Enemy clan. */
     private final Clan enemyClan;
 
     /**

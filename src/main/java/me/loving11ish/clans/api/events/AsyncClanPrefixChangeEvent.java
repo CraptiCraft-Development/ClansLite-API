@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan changes its prefix.
+ */
 public class AsyncClanPrefixChangeEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who changed the clan prefix. */
     private final Player createdBy;
+    /** Clan whose prefix changed. */
     private final Clan clan;
+    /** Previous clan prefix. */
     private final String oldPrefix;
+    /** New clan prefix. */
     private final String newPrefix;
 
     /**

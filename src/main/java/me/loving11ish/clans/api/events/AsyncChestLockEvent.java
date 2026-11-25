@@ -8,12 +8,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan chest is locked.
+ */
 public class AsyncChestLockEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who locked the chest. */
     private final Player createdBy;
+    /** Clan that owns the chest. */
     private final Clan owningClan;
+    /** Locked clan chest. */
     private final ClanChest chest;
+    /** Location of the locked chest. */
     private final Location chestLocation;
 
     /**

@@ -6,10 +6,16 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan is created.
+ */
 public class AsyncClanCreateEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who created the clan. */
     private final Player createdBy;
+    /** Newly created clan. */
     private final Clan clan;
 
     /**

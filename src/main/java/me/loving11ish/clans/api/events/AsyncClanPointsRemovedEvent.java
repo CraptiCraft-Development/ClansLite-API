@@ -7,16 +7,28 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when clan or player points are removed from a clan player.
+ */
 public class AsyncClanPointsRemovedEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who triggered the point removal. */
     private final Player createdBy;
+    /** Clan losing the points. */
     private final Clan playerClan;
+    /** Clan player losing the points. */
     private final ClanPlayer clanPlayer;
+    /** Previous clan-player point balance. */
     private final int previousClanPlayerPointBalance;
+    /** New clan-player point balance. */
     private final int newClanPlayerPointBalance;
+    /** Number of withdrawn points. */
     private final int withdrawPointValue;
+    /** Previous clan point balance. */
     private final int previousClanPointBalance;
+    /** New clan point balance. */
     private final int newClanPointBalance;
 
     /**

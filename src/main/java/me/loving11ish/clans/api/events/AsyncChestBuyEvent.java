@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan purchases an additional chest.
+ */
 public class AsyncChestBuyEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who purchased the chest. */
     private final Player createdBy;
+    /** Clan that purchased the chest. */
     private final Clan owningClan;
+    /** Previous maximum number of chests allowed for the clan. */
     private final int oldClanMaxAllowedChests;
+    /** New number of chest slots. */
     private final int newChestCount;
 
     /**
@@ -48,6 +56,10 @@ public class AsyncChestBuyEvent extends Event {
         return HANDLERS;
     }
 
+    /**
+     * Get the player who purchased the chest.
+     * @return the player
+     */
     public Player getCreatedBy() {
         return createdBy;
     }

@@ -5,10 +5,16 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan is disbanded by a player.
+ */
 public class AsyncClanDisbandEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who disbanded the clan. */
     private final Player createdBy;
+    /** Name of the disbanded clan. */
     private final String clanName;
 
     /**

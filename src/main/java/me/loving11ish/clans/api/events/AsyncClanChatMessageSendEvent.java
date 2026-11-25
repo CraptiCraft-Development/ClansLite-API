@@ -8,13 +8,22 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
+/**
+ * Fired when a clan chat message is sent.
+ */
 public class AsyncClanChatMessageSendEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who sent the message. */
     private final Player createdBy;
+    /** Clan in which the message was sent. */
     private final Clan clan;
+    /** Prefix applied to the clan chat message. */
     private final String prefix;
+    /** Sent message content. */
     private final String message;
+    /** UUIDs of the message recipients. */
     private final ArrayList<String> recipients;
 
     /**

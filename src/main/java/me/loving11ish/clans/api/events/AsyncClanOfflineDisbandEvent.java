@@ -5,10 +5,16 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when an offline player's clan is disbanded.
+ */
 public class AsyncClanOfflineDisbandEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Offline player associated with the disbanded clan. */
     private final OfflinePlayer createdBy;
+    /** Name of the disbanded clan. */
     private final String clanName;
 
     /**

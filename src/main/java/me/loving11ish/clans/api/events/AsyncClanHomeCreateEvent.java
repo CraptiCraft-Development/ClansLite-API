@@ -7,11 +7,18 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan home is created.
+ */
 public class AsyncClanHomeCreateEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who created the clan home. */
     private final Player createdBy;
+    /** Clan that owns the home. */
     private final Clan clan;
+    /** Location of the created clan home. */
     private final Location homeLocation;
 
     /**

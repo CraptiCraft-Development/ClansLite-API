@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when one clan removes another as an enemy.
+ */
 public class AsyncClanEnemyRemoveEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who removed the enemy. */
     private final Player createdBy;
+    /** Clan removing the enemy. */
     private final Clan clan;
+    /** Creator of the former enemy clan. */
     private final Player exEnemyClanCreatedBy;
+    /** Former enemy clan. */
     private final Clan exEnemyClan;
 
     /**

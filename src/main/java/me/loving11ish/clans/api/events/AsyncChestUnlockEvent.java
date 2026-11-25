@@ -6,10 +6,16 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan chest lock is removed.
+ */
 public class AsyncChestUnlockEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who removed the lock. */
     private final Player createdBy;
+    /** Location of the removed lock. */
     private final Location removedLockLocation;
 
     /**

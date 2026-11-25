@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when one clan removes another as an ally.
+ */
 public class AsyncClanAllyRemoveEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who removed the alliance. */
     private final Player createdBy;
+    /** Clan that removed the alliance. */
     private final Clan clan;
+    /** Creator of the former allied clan. */
     private final Player exAllyClanCreatedBy;
+    /** Former allied clan. */
     private final Clan exAllyClan;
 
     /**

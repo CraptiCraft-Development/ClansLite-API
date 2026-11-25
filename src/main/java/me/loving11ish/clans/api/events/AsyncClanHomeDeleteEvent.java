@@ -7,11 +7,18 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan home is deleted.
+ */
 public class AsyncClanHomeDeleteEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who deleted the clan home. */
     private final Player createdBy;
+    /** Clan that owned the home. */
     private final Clan clan;
+    /** Location of the deleted clan home. */
     private final Location deletedHomeLocation;
 
     /**

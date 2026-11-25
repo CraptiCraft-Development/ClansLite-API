@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a chest owned by a clan is broken.
+ */
 public class AsyncChestBreakEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Location of the broken chest. */
     private final Location chestLocation;
+    /** Broken chest block. */
     private final Block block;
+    /** UUID of the owning clan owner, represented as a string. */
     private final String owningClanOwnerUUID;
+    /** Name of the owning clan. */
     private final String owningClanName;
 
     /**

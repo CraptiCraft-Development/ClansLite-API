@@ -7,17 +7,28 @@ import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * Fired when points are awarded for a player action.
+ */
 public class AsyncPlayerPointsAwardedEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who triggered the point award. */
     private final Player createdBy;
+    /** Player who earned the points. */
     private final Player killer;
+    /** Player who was defeated. */
     private final Player victim;
+    /** Clan of the player who earned the points, or {@code null}. */
     @Nullable
     private final Clan killerClan;
+    /** Clan of the defeated player, or {@code null}. */
     @Nullable
     private final Clan victimClan;
+    /** Number of points awarded. */
     private final int pointValue;
+    /** Whether the points were awarded for killing an enemy. */
     private final boolean isEnemyPointReward;
 
     /**

@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when clan ownership is transferred to another player.
+ */
 public class AsyncClanTransferOwnershipEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who initiated the ownership transfer. */
     private final Player createdBy;
+    /** Previous clan owner. */
     private final Player originalClanOwner;
+    /** New clan owner. */
     private final Player newClanOwner;
+    /** Clan whose ownership changed. */
     private final Clan newClan;
 
     /**

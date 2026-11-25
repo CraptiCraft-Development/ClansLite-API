@@ -6,11 +6,18 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a clan chat spy state is toggled.
+ */
 public class AsyncClanChatSpyToggledEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who toggled chat spy. */
     private final Player createdBy;
+    /** Clan player affected by the toggle. */
     private final ClanPlayer clanPlayer;
+    /** Whether clan chat spy is enabled. */
     private final boolean clanChatSpyState;
 
     /**

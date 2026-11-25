@@ -6,13 +6,22 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when a player attacks another member of the same clan.
+ */
 public class AsyncClanFriendlyFireAttackEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who triggered the event. */
     private final Player createdBy;
+    /** Player who initiated the attack. */
     private final Player attackingPlayer;
+    /** Player who was attacked. */
     private final Player victimPlayer;
+    /** Clan of the attacking player. */
     private final Clan attackingClan;
+    /** Clan of the victim player. */
     private final Clan victimClan;
 
     /**

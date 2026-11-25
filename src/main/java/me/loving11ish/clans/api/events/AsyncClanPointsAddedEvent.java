@@ -7,16 +7,28 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when clan or player points are added to a clan player.
+ */
 public class AsyncClanPointsAddedEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who triggered the point addition. */
     private final Player createdBy;
+    /** Clan receiving the points. */
     private final Clan playerClan;
+    /** Clan player receiving the points. */
     private final ClanPlayer clanPlayer;
+    /** Previous clan-player point balance. */
     private final int previousClanPlayerPointBalance;
+    /** New clan-player point balance. */
     private final int newClanPlayerPointBalance;
+    /** Number of deposited points. */
     private final int depositPointValue;
+    /** Previous clan point balance. */
     private final int previousClanPointBalance;
+    /** New clan point balance. */
     private final int newClanPointBalance;
 
     /**

@@ -6,12 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Fired when one clan adds another as an ally.
+ */
 public class AsyncClanAllyAddEvent extends Event {
 
+    /** Registered handlers for this event. */
     private static final HandlerList HANDLERS = new HandlerList();
+    /** Player who added the alliance. */
     private final Player createdBy;
+    /** Clan initiating the alliance. */
     private final Clan clan;
+    /** Creator of the allied clan. */
     private final Player allyClanCreatedBy;
+    /** Allied clan. */
     private final Clan allyClan;
 
     /**
